@@ -1,0 +1,113 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Lobster', cursive;
+}
+.header{
+    background-color: darkturquoise;
+    height: 120px;
+    width: 100%;
+    position:fixed;
+}
+.img1{
+    padding: 20px;
+    float: left;
+}
+.div-name{
+    float: left;
+    margin-top: 25px;
+    color:red;
+}
+.header-container{
+    float: right;
+    margin-top: 70px;
+    
+}
+.header-container a{
+    color: rgb(57, 34, 139);
+    text-decoration: none;
+    margin: 10px;
+    font-size: large;
+}
+.header-container a:hover{
+    text-decoration: underline;
+    color: tomato;
+}
+.mid{
+
+}
+.mid-container{
+    padding: 5px;
+}
+.mid-container h4{
+    margin: 80px;
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    float: left;
+}
+.mid-container a:hover{
+    color: brown;
+}
+span{
+    color: black;
+    font-size: 3rem;
+}
+
+.left{
+    margin-left: 50px;
+    padding: 10px;
+}
+.div-left{
+    float: left;
+    width: 45%;
+    padding-right: 40px;
+
+}
+.div-right{
+    float: left;
+    width: 45%;
+    
+}
+.down{
+    margin-left: 50px;
+}
+.div-left1{
+    float: left;
+    width: 45%;
+    padding-right: 40px;
+
+}
+.div-right2{
+    float: left;
+    width: 45%;
+    
+}
+.metro-image{
+    width: 250px;
+    height: 250px;
+    border: 3px solid white;
+    border-radius: 180%;
+    margin-left: 550px;
+    margin-top: 300px;
+    margin-bottom: 140px;
+    transition: 0.3s;
+    font-size: 0%;
+}
+.metro-image:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.footer-metro{
+    background-color: yellowgreen;
+    color:black;
+    height: 152px;
+}
+.text{
+    margin-top: 50px;
+}
+.metro{
+    height: 100px;
+    width: 70px;
+    float: right;
+    
+}

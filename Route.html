@@ -1,0 +1,87 @@
+<?php
+if(isset($_POST['search']))
+{
+    $valueTosearch=$POST['valueTosearch'];
+    $query="SELECT * FROM `route` WHERE CONCAT(`ID`, `From`, `To`, `Date`, `Price`) LIKE"%.$valuwTosearch%"";
+    $search_result= filterTable($query);
+}
+else
+{
+    $query= "SELECT * FROM `route`";
+    $search_result= filterTable($query);
+
+}
+function filtertable( $query){
+    $connect = mysqli_connect("localhost", "root", "", "metro db final");
+    $filter_result= mysql_query($connect, $query);
+    return $filter_result;
+
+}
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Metrorail-Route</title>
+        <link rel="stylesheet" type="text/css" href="css/route_style.css">
+        <style>
+            table tr td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="main">
+                <div class="logo">
+                   <a href="Home.html"> <img src="metro.png"></a>
+                </div>
+                <ul>
+                    <li class="active"><a href="Home.html">Home</a> </li>
+                    <li><a href="Login.html">Log in</a> </li>
+                    <li><a href="Route.html">Find Route</a> </li>
+                    <li><a href="contactus.html">Contact us</a> </li>
+                    
+                </ul>
+            </div>
+            <div class="search">
+                <h1>Search Route</h1>
+                <div class="textbox" action="Route_php.php" method="post">
+                    <i class="fas fa-user" area-hidden="true"></i>
+                   <input type="text" placeholder="From" name="valueTosearch" value="">
+                </div>
+                <div class="textbox">
+                    <i class="fas fa-user" area-hidden="true"></i>
+                   <input type="text" placeholder="To" name="" value="">
+                </div>
+                <div class="textbox">
+                    <i class="fas fa-user" area-hidden="true"></i>
+                   <input type="date" placeholder="" name="" value="">
+                </div>
+                
+                <input class="btn" type="button" name="" value="Search">
+                <?php
+
+                while($row = mysqli_fetch_array($result)):?>
+                <tr>
+                    <td>
+                        <?php echo $row['ID']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['From']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['To']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['Price']; ?>
+                    </td>
+                    <td>
+                        <?php echo $row['Price']; ?>
+                    </td>
+                </tr>
+                <?php endwhile;?>
+            </div>
+        </header>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+Database Name -> metro_rail
+
+Table Name -> registered_user
+
+	1. id (autoincrement)
+	2. first_name
+	3. last_name
+	4. email
+	5. phone
+	6. username
+	7. password
+
+Table Name -> timetable
+	1. id [autoincrement]
+	2. train_num
+	3. uttora
+	4. airport
+	5. mirpur_12
+	6. mirpur_10
+	7. idb
+	8. farmgate
+
+QUERY Condition :
+
+#. Uttora to Farmgate Route
+	SELECT train_num,placeTo,placeForm FROM timetable WHERE farmgate>uttora
+
+#. Farmgate to Uttora Route
+	SELECT train_num,placeTo,placeForm FROM timetable WHERE farmgate<uttora
